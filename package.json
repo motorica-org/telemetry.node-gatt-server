@@ -1,0 +1,24 @@
+{
+  "name": "@motorica-org/telemetry.node-gatt-server",
+  "version": "0.0.1",
+  "description": "A custom Prosthetic GATT profile BLE Server / Peripheral implementation for prototyping and GA integration testing.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "os": [
+    "linux"
+  ],
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/motorica-org/telemetry.node-gatt-server.git"
+  },
+  "author": {
+    "name": "Dmitriy Volkov",
+    "url" : "https://keybase.io/wldhx"
+  },
+  "dependencies": {
+    "bleno": ">0.1.4"
+  }
+}

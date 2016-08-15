@@ -2,7 +2,7 @@ var bleno = require('bleno');
 
 var BlenoPrimaryService = bleno.PrimaryService;
 
-var EchoCharacteristic = require('./characteristic');
+var ProstheticFlexStatusCharacteristic = require('./characteristic');
 
 console.log('bleno - echo');
 
@@ -24,7 +24,7 @@ bleno.on('advertisingStart', function(error) {
       new BlenoPrimaryService({
         uuid: 'e35c8bac-a062-4e3f-856d-2cfa87f2f171',
         characteristics: [
-          new EchoCharacteristic()
+          new ProstheticFlexStatusCharacteristic()
         ]
       })
     ]);

@@ -10,7 +10,7 @@ bleno.on('stateChange', function(state) {
   console.log('on -> stateChange: ' + state);
 
   if (state === 'poweredOn') {
-    bleno.startAdvertising('echo', ['ec00']);
+    bleno.startAdvertising('echo', ['e35c8bac-a062-4e3f-856d-2cfa87f2f171']);
   } else {
     bleno.stopAdvertising();
   }
@@ -22,7 +22,7 @@ bleno.on('advertisingStart', function(error) {
   if (!error) {
     bleno.setServices([
       new BlenoPrimaryService({
-        uuid: 'ec00',
+        uuid: 'e35c8bac-a062-4e3f-856d-2cfa87f2f171',
         characteristics: [
           new EchoCharacteristic()
         ]

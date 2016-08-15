@@ -6,7 +6,7 @@ var BlenoCharacteristic = bleno.Characteristic;
 
 var EchoCharacteristic = function() {
   EchoCharacteristic.super_.call(this, {
-    uuid: 'ec0e',
+    uuid: '58d3c1f4-b253-4055-9d02-3932126539f8',
     properties: ['read', 'write', 'notify'],
     value: null
   });

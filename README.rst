@@ -1,7 +1,7 @@
 motorica-org/telemetry.node-gatt
 --------------------------------
 
-A custom Prosthetic GATT profile BLE Server / Peripheral implementation for prototyping and GA integration testing.
+A custom `Prosthetic GATT profile <https://github.com/motorica-org/telemetry-docs/wiki/BLE-Profile>`_ BLE Server / Peripheral implementation for prototyping and GA integration testing.
 
 Using
 =====

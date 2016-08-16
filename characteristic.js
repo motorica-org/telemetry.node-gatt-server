@@ -12,7 +12,9 @@ var ProstheticFlexStatusCharacteristic = new BlenoCharacteristic({
     value: null,
     onReadRequest:
 	    function(offset, callback) {
-		    // FIXME: handle offset
+		    if (offset) {
+			    callback(this.RESULT_ATTR_NOT_LONG, null);
+		    }
 
 		    callback(this.RESULT_SUCCESS, Buffer.from([read_count]));
 		    read_count += 1;

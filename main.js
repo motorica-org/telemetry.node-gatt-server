@@ -30,3 +30,19 @@ bleno.on('advertisingStart', function(error) {
     ]);
   }
 });
+
+
+process.stdin.setRawMode(true); // don't require Enter to get keystrokes
+process.stdin.resume(); // resume parent processes's stdin
+process.stdin.setEncoding('utf8');
+console.log('Press any key to update ProstheticFlexStatusCharacteristic\'s value');
+
+let i = 0;
+process.stdin.on('data',
+		(key) => {
+			if (key === '\u0003') { // C-c
+				process.exit();
+			}
+			ProstheticFlexStatusCharacteristic.value = [i];
+			i += 1;
+		});

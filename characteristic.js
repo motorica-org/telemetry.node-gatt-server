@@ -32,13 +32,4 @@ Object.defineProperty(ProstheticFlexStatusCharacteristic, 'value', {
 	}
 });
 
-var i = 0;
-setInterval(
-	function() {
-		ProstheticFlexStatusCharacteristic.value = [i];
-		i += 1;
-	},
-	1000
-);
-
 module.exports = ProstheticFlexStatusCharacteristic;

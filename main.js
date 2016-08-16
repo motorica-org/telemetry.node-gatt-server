@@ -1,8 +1,8 @@
-var bleno = require('bleno');
+let bleno = require('bleno');
 
-var BlenoPrimaryService = bleno.PrimaryService;
+let BlenoPrimaryService = bleno.PrimaryService;
 
-var ProstheticFlexStatusCharacteristic = require('./characteristic');
+let ProstheticFlexStatusCharacteristic = require('./characteristic');
 
 console.log('bleno - echo');
 

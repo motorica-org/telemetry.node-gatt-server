@@ -1,10 +1,10 @@
-var util = require('util');
+let util = require('util');
 
-var bleno = require('bleno');
+let bleno = require('bleno');
 
-var BlenoCharacteristic = bleno.Characteristic;
+let BlenoCharacteristic = bleno.Characteristic;
 
-var ProstheticFlexStatusCharacteristic = new BlenoCharacteristic({
+let ProstheticFlexStatusCharacteristic = new BlenoCharacteristic({
     uuid: '58d3c1f4-b253-4055-9d02-3932126539f8',
     properties: ['read', 'notify'],
     onReadRequest:

@@ -1,3 +1,5 @@
+'use strict';
+
 let bleno = require('bleno');
 let ProstheticFlexStatusCharacteristic = require('./characteristic');
 

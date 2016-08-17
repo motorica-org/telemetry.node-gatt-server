@@ -1,10 +1,7 @@
 let bleno = require('bleno');
-
-let BlenoPrimaryService = bleno.PrimaryService;
-
 let ProstheticFlexStatusCharacteristic = require('./characteristic');
 
-let ProstheticFlexStatusService = new BlenoPrimaryService({
+let ProstheticFlexStatusService = new bleno.PrimaryService({
 	uuid: 'e35c8bac-a062-4e3f-856d-2cfa87f2f171',
 	characteristics: [
 		ProstheticFlexStatusCharacteristic

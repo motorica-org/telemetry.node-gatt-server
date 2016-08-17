@@ -6,7 +6,7 @@ let ProstheticFlexStatusCharacteristic = require('./characteristic');
 
 console.log('bleno - echo');
 
-bleno.on('stateChange', function(state) {
+bleno.on('stateChange', (state) => {
   console.log('on -> stateChange: ' + state);
 
   if (state === 'poweredOn') {
@@ -16,7 +16,7 @@ bleno.on('stateChange', function(state) {
   }
 });
 
-bleno.on('advertisingStart', function(error) {
+bleno.on('advertisingStart', (error) => {
   console.log('on -> advertisingStart: ' + (error ? 'error ' + error : 'success'));
 
   if (!error) {

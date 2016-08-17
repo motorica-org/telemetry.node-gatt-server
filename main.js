@@ -4,13 +4,20 @@ let BlenoPrimaryService = bleno.PrimaryService;
 
 let ProstheticFlexStatusCharacteristic = require('./characteristic');
 
+let ProstheticFlexStatusService = new BlenoPrimaryService({
+	uuid: 'e35c8bac-a062-4e3f-856d-2cfa87f2f171',
+	characteristics: [
+		ProstheticFlexStatusCharacteristic
+	]
+});
+
 console.log('bleno - echo');
 
 bleno.on('stateChange', (state) => {
   console.log('on -> stateChange: ' + state);
 
   if (state === 'poweredOn') {
-    bleno.startAdvertising('echo', ['e35c8bac-a062-4e3f-856d-2cfa87f2f171']);
+    bleno.startAdvertising('echo', [ProstheticFlexStatusService.uuid]);
   } else {
     bleno.stopAdvertising();
   }
@@ -21,12 +28,7 @@ bleno.on('advertisingStart', (error) => {
 
   if (!error) {
     bleno.setServices([
-      new BlenoPrimaryService({
-        uuid: 'e35c8bac-a062-4e3f-856d-2cfa87f2f171',
-        characteristics: [
-          ProstheticFlexStatusCharacteristic
-        ]
-      })
+		    ProstheticFlexStatusService,
     ]);
   }
 });

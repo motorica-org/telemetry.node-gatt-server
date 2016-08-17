@@ -5,10 +5,12 @@ const bleno = require('bleno');
 const ProstheticFlexStatusCharacteristic = require('./characteristic');
 
 
+const mProstheticFlexStatusCharacteristic = new ProstheticFlexStatusCharacteristic([0]);
+
 const ProstheticFlexStatusService = new bleno.PrimaryService({
 	uuid: 'e35c8bac-a062-4e3f-856d-2cfa87f2f171',
 	characteristics: [
-		ProstheticFlexStatusCharacteristic
+		mProstheticFlexStatusCharacteristic
 	]
 });
 
@@ -47,6 +49,6 @@ process.stdin.on('data',
 			if (key === '\u0003') { // C-c
 				process.exit();
 			}
-			ProstheticFlexStatusCharacteristic.value = [i];
+			mProstheticFlexStatusCharacteristic.value = [i];
 			i += 1;
 		});

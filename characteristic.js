@@ -27,4 +27,4 @@ class ProstheticFlexStatusCharacteristic extends bleno.Characteristic {
 	}
 }
 
-module.exports = new ProstheticFlexStatusCharacteristic([0]);
+module.exports = ProstheticFlexStatusCharacteristic;

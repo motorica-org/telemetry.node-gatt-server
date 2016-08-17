@@ -1,7 +1,9 @@
 'use strict';
 
+
 let bleno = require('bleno');
 let ProstheticFlexStatusCharacteristic = require('./characteristic');
+
 
 let ProstheticFlexStatusService = new bleno.PrimaryService({
 	uuid: 'e35c8bac-a062-4e3f-856d-2cfa87f2f171',
@@ -10,7 +12,6 @@ let ProstheticFlexStatusService = new bleno.PrimaryService({
 	]
 });
 
-console.log('bleno - echo');
 
 bleno.on('stateChange', (state) => {
   console.log('on -> stateChange: ' + state);
@@ -32,6 +33,8 @@ bleno.on('advertisingStart', (error) => {
   }
 });
 
+
+console.log('bleno - echo');
 
 process.stdin.setRawMode(true); // don't require Enter to get keystrokes
 process.stdin.resume(); // resume parent processes's stdin

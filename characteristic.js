@@ -1,4 +1,4 @@
-let bleno = require('bleno');
+const bleno = require('bleno');
 
 
 // FIXME: reading is currently broken

@@ -1,11 +1,11 @@
 'use strict';
 
 
-let bleno = require('bleno');
-let ProstheticFlexStatusCharacteristic = require('./characteristic');
+const bleno = require('bleno');
+const ProstheticFlexStatusCharacteristic = require('./characteristic');
 
 
-let ProstheticFlexStatusService = new bleno.PrimaryService({
+const ProstheticFlexStatusService = new bleno.PrimaryService({
 	uuid: 'e35c8bac-a062-4e3f-856d-2cfa87f2f171',
 	characteristics: [
 		ProstheticFlexStatusCharacteristic

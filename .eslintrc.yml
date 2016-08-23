@@ -1,0 +1,9 @@
+extends: airbnb-base
+rules:
+        max-len:
+                - error
+                - 200
+                - ignoreComments: true
+        object-curly-spacing:
+                - error
+                - never

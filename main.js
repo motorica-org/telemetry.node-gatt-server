@@ -7,7 +7,7 @@ const ProstheticFlexStatusService = new bleno.PrimaryService({uuid: 'e35c8bac-a0
                                                               characteristics: [mProstheticFlexStatusCharacteristic]});
 
 bleno.on('stateChange', (state) => {
-  console.log('on -> stateChange: ' + state);
+  console.log(`on -> stateChange: ${state}`);
 
   if (state === 'poweredOn') {
     bleno.startAdvertising('echo', [ProstheticFlexStatusService.uuid]);
@@ -17,7 +17,7 @@ bleno.on('stateChange', (state) => {
 });
 
 bleno.on('advertisingStart', (error) => {
-  console.log('on -> advertisingStart: ' + (error ? 'error ' + error : 'success'));
+  console.log(`on -> advertisingStart: ${error ? `error ${error}` : 'success'}`);
 
   if (!error) {
     bleno.setServices([
